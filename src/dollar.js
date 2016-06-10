@@ -1,17 +1,16 @@
 /**
  * Code goes here for program or package.
  */
-export default (amount) => {
-  const times = (value) => {
-    amount *= value;
-  };
-  
+
+function createDollar(amount) {
+  const times = value => createDollar(amount * value);
   const getAmount = () => amount;
-
-
 
   return {
     getAmount,
     times
   }
 }
+
+
+export default createDollar
