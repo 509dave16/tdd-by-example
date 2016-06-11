@@ -19,10 +19,8 @@ import {expect} from 'chai';
 describe('Dollar', () => {
   it('times', () => {
     const five = createDollar(5);
-    let product = five.times(2);
-    expect(product.getAmount()).to.equal(10);
-    product = five.times(3);
-    expect(product.getAmount()).to.equal(15);
+    expect(five.times(2).equals(createDollar(10))).to.be.true;
+    expect(five.times(3).equals(createDollar(15))).to.be.true;
   });
 
   it('equals', () => {
