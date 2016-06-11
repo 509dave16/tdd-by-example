@@ -5,10 +5,12 @@
 function createDollar(amount) {
   const times = value => createDollar(amount * value);
   const getAmount = () => amount;
+  const equals = dollar => amount === dollar.getAmount();
 
   return {
+    times,
     getAmount,
-    times
+    equals
   }
 }
 
